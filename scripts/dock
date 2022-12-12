@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# toggles displays on i3 config reload
+
+if (xrandr | grep "DP-2-1 disconnected"); then
+   	xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+	xrandr --output HDMI-1 --off
+	xrandr  --output DP-1 --off
+	xrandr  --output DP-2 --off
+	xrandr  --output DP-2-1 --off
+	xrandr  --output DP-2-2 --off
+	xrandr --output DP-2-3 --off
+	feh --bg-scale /home/hummusbird/Images/1975.jpg	
+else
+	xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1920x1208 --rotate normal
+	xrandr --output HDMI-1 --off
+	xrandr --output DP-1 --off
+	xrandr --output DP-2 --off
+	xrandr --output DP-2-1 --mode 1920x1080 --pos 0x128 --rotate normal
+	xrandr --output DP-2-2 --mode 1920x1080 --pos 1920x128 --rotate normal 
+	xrandr --output DP-2-3 --mode 1920x1080 --pos 3840x0 --rotate right    
+	xrandr --output eDP-1 --primary --mode 1920x1080 --pos 1920x1208 --rotate normal
+	feh --bg-scale /home/hummusbird/Images/1975.jpg
+fi
+
+# run each xrandr separately to avoid weird issues
