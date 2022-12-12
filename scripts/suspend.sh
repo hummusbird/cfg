@@ -2,6 +2,8 @@
 # dell 7430
 # disables bluetooth to prevent suspend issues
 
+# /usr/lib/systemd/system-sleep/suspend.sh 
+
 # add fingerprint drivers if you have them
 
 if [ "${1} == "pre" ]; then
