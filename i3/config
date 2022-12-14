@@ -16,7 +16,7 @@ client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 exec --no-startup-id feh --bg-scale ~/Images/1975.jpg
 
 # vsync
-exec_always --no-startup-id picom -b
+exec_always --no-startup-id picom -b --experimental-backends
 
 #dock
 exec --no-s
@@ -29,12 +29,16 @@ exec_always --no-startup-id /home/hummusbird/scripts/dock
 set $mod Mod4
 
 # Input
-exec_always --no-startup-id xinput set-prop "pointer:Logitech MX Master 2S" "libinput Accel Speed" -1
+exec_always --no-startup-id xinput set-prop "pointer:MX Master 2S Mouse" "libinput Accel Speed" -1
 exec setxkbmap -layout gb
 
 # gaps config
 gaps inner 10
+gaps outer 0
+gaps left -10
+gaps top -10
 gaps bottom -10
+gaps right -10
 default_border	pixel 0
 
 # Font for window titles. Will also be used by the bar unless a different font
