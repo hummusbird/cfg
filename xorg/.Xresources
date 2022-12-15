@@ -1,0 +1,12 @@
+xterm*background: #222222
+xterm*foreground: #bdbdbd
+xterm*faceName: hack
+xterm*faceSize: 12
+
+xcursor.size: 12
+
+URxvt*background: rgba:0000/0000/0200/c800
+URxvt*foreground: #bdbdbd
+URxvt*font: xft:hack:size=12
+URxvt*scrollBar: false
+URxvt*depth: 32
