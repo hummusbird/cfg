@@ -17,6 +17,7 @@ order += "battery all"
 order += "disk /"
 order += "load"
 order += "memory"
+order += "read_file brightness"
 order += "volume master"
 order += "tztime local"
 
@@ -45,6 +46,10 @@ load {
 
 memory {
         format = "RAM [%used]"
+}
+
+read_file brightness {
+	path = "/sys/class/backlight/intel_backlight/brightness"
 }
 
 volume master {
