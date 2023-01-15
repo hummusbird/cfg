@@ -17,6 +17,10 @@ exec_always --no-startup-id picom -b
 # dock
 exec_always --no-startup-id /home/hummusbird/scripts/dock
 
+# screenshot
+
+bindsym Print exec --no-startup-id gscreenshot -s -f "/home/hummusbird/screenshots/"
+
 # display binds (f16 & f15)
 bindsym XF86Launch7 exec --no-startup-id /home/hummusbird/.screenlayout/closed_docked.sh
 bindsym XF86Launch6 exec --no-startup-id /home/hummusbird/.screenlayout/single.sh
@@ -45,9 +49,11 @@ font pango:monospace 8
 exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 000000 --image ~/.config/1975_blur.jpg --nofork
 
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 000000 --image ~/.config/1975_blur.jpg --nofork
 bindsym $mod+Shift+x exec --no-startup-id i3lock -c 000000 --image ~/.config/1975_blur.jpg --nofork
+
+# applets
 
 exec --no-startup-id nm-applet
 
