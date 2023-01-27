@@ -30,7 +30,7 @@ wireless _first_ {
 
 ethernet _first_ {
         format_up = "%ip @ %speed"
-        format_down = "eth down"
+        format_down = ""
 }
 
 battery all {
