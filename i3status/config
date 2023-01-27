@@ -8,7 +8,9 @@
 
 general {
         colors = true
-        interval = 1
+	color_good = "#00ff99"
+        color_bad = "#f42069"
+	interval = 1
 }
 
 order += "wireless _first_"
@@ -17,13 +19,13 @@ order += "battery all"
 order += "disk /"
 order += "load"
 order += "memory"
-order += "read_file brightness"
 order += "volume master"
 order += "tztime local"
 
 wireless _first_ {
         format_up = "%ip @ %essid"
         format_down = "wifi down"
+	separator = true
 }
 
 ethernet _first_ {
@@ -32,29 +34,28 @@ ethernet _first_ {
 }
 
 battery all {
-        format = "%status %percentage %remaining"
+	integer_battery_capacity = true
+        format = "%percentage / %remaining / %consumption"
+	status_bat = "dis"
+	status_chr = "chr"
+	status_full = "full"
 }
 
 disk "/" {
-        format = "DISK [%used]"
+        format = "disk %used"
 	prefix_type = "decimal"
 }
 
 load {
-        format = "%1min"
+        format = "cpu %1min"
 }
 
 memory {
-        format = "RAM [%used]"
-}
-
-read_file brightness {
-	path = "/sys/class/backlight/intel_backlight/brightness"
+        format = "ram %used"
 }
 
 volume master {
-	format = "VOL %volume"
-	format_muted = "VOL MUTE"
+	format = "vol %volume"
 	device = "default"
 	mixer = "Master"
 	mixer_idx = 0
