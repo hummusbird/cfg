@@ -227,12 +227,11 @@ bar {
 		inactive_workspace #270e16 #270e16 #aaaaaa
 	}
 	status_command bumblebee-status \
-	-m uptime traffic nic cpu2 memory disk pasink battery date time \
+	-m uptime nic cpu2 memory disk pasink battery date time \
 	-p time.format="%l:%M" date.format="%a, %b %d" \
 	disk.format="{used}" disk.system="SI" \
 	memory.format="{used}" \
 	nic.include="wlo1" nic.states="^down" nic.format="{ip}" \
 	cpu2.layout="cpu2.coresload" \
-	traffic.format="{:.0f}" traffic.showname=false \
 	-t night-powerline
 }
