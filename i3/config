@@ -1,5 +1,4 @@
-# i3 cfg
-#
+# hummusbird // i3 cfg
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #f42069 #f42069 #ffffff #2e9ef4   #285577
@@ -21,7 +20,6 @@ exec_always --no-startup-id /home/hummusbird/scripts/dock
 exec --no startup-id streamdeck -n
 
 # screenshot
-
 bindsym Print exec --no-startup-id gscreenshot -c -s -f "/home/hummusbird/screenshots/"
 
 # display binds (f16 & f15)
@@ -30,7 +28,7 @@ bindsym XF86Launch6 exec --no-startup-id /home/hummusbird/.screenlayout/single.s
 
 set $mod Mod4
 
-# Input
+# input
 exec_always --no-startup-id xinput set-prop "pointer:MX Master 2S Mouse" "libinput Accel Speed" -1
 exec setxkbmap -layout gb
 
@@ -43,41 +41,38 @@ gaps bottom -10
 gaps right -10
 default_border	pixel 0
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
+# Font for window titles.
 font pango:monospace 8
 
-# Start XDG autostart .desktop files using dex. See also
-# https://wiki.archlinux.org/index.php/XDG_Autostart
+# Start XDG autostart .desktop files
 exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock
-
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 000000 --image ~/.config/1975_blur.jpg --nofork
 bindsym $mod+Shift+x exec --no-startup-id i3lock -c 000000 --image ~/.config/1975_blur.jpg --nofork
 
 # applets
-
 exec --no-startup-id nm-applet
 
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2.5% && $refresh_i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2.5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+# volkeys
+set $refresh_status killall -SIGUSR1 bumblebee-status
+bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +2.5% && $refresh_status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_status
+bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2.5% && $refresh_status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_status
 
+# mutekeys
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+# brightness
 bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
-# Use Mouse+$mod to drag floating windows to their wanted position
+# window drag
 floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
 # start a terminal
@@ -86,7 +81,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
+# start dmenu
 bindsym $mod+shift+d exec --no-startup-id dmenu_run -nb '#262626' -sb '#f42069'
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --entry-type=filename --dmenu="dmenu -nb '#262626' -sb '#f42069'"
 
@@ -144,7 +139,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+#bindsym $mod+z focus child
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -157,7 +152,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "0"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -192,18 +187,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
+        # arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
         bindsym Down resize grow height 10 px or 10 ppt
         bindsym Up resize shrink height 10 px or 10 ppt
@@ -217,8 +201,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
+# start bumblebee-status
 bar {
 	colors {
 		statusline #aaaaaa
