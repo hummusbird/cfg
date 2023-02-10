@@ -29,7 +29,6 @@ bindsym XF86Launch6 exec --no-startup-id /home/hummusbird/.screenlayout/single.s
 set $mod Mod4
 
 # input
-exec_always --no-startup-id xinput set-prop "pointer:MX Master 2S Mouse" "libinput Accel Speed" -1
 exec setxkbmap -layout gb
 
 # gaps config
@@ -209,12 +208,9 @@ bar {
 		focused_workspace #f42069 #270e16 #ffffff
 		inactive_workspace #270e16 #270e16 #aaaaaa
 	}
-	status_command bumblebee-status \
-	-m uptime nic cpu2 memory disk pasink battery date time \
-	-p time.format="%l:%M" date.format="%a, %b %d" \
-	disk.format="{used}" disk.system="SI" \
-	memory.format="{used}" \
-	nic.include="wlo1" nic.states="^down" nic.format="{ip}" \
-	cpu2.layout="cpu2.coresload" \
-	-t night-powerline
+
+	status_command i3status
+	separator_symbol " | "
+	font pango:fira code 10
+
 }
