@@ -19,7 +19,6 @@ order += "tztime local"
 wireless _first_ {
         format_up = "%ip @ %essid"
         format_down = "wifi down"
-	separator = true
 }
 
 ethernet _first_ {
@@ -28,11 +27,13 @@ ethernet _first_ {
 }
 
 battery all {
-	integer_battery_capacity = true
-        format = "%percentage / %remaining / %consumption"
-	status_bat = "dis"
-	status_chr = "chr"
-	status_full = "full"
+        format = "%percentage / %remaining / %status%consumption"
+	format_percentage = "%.00f%s"
+	status_bat = "-"
+	status_chr = "+"
+	status_full = ""
+	low_threshold = 20
+	threshold_type = "percentage"
 }
 
 disk "/" {
