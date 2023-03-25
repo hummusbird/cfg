@@ -45,7 +45,6 @@ disk "/" {
 
 cpu_usage {
         format = "%usage"
-	max_threshold = 0
 }
 
 read_file cputemp {
