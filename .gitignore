@@ -9,4 +9,14 @@ discord-stable.desktop
 /marlin
 /pulse
 /gh
+/vlc
+/htop
+/gtk-2.0
+/coreapps
+/GIMP
+/Electron
+/copyq
 key.txt
+QtProject.conf
+cv_debug.log
+mimeapps.list
