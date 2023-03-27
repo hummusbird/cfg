@@ -1,0 +1,12 @@
+#!/bin/bash
+
+xfreerdp +clipboard /v:HOSTNAME \
+/u:USERNAME \
+/p:$(zenity \
+--entry \
+--title="Password" \
+--text="_password:" \
+--hide-text) \
+/floatbar \
+/dynamic-resolution \
+-grab-keyboard
