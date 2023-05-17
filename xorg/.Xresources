@@ -10,3 +10,5 @@ URxvt*foreground: #bdbdbd
 URxvt*font: xft:hack:size=12
 URxvt*scrollBar: false
 URxvt*depth: 32
+URxvt*iso14755: false
+URxvt*iso14755_52: false
