@@ -1,0 +1,9 @@
+{
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "editor.fontFamily": "Fira Code",
+    "editor.formatOnType": true,
+    "editor.formatOnSave": true,
+    "editor.codeLens": false,
+    "editor.fontLigatures": true
+}
