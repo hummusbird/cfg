@@ -14,17 +14,17 @@ exec_always --no-startup-id feh --bg-fill ~/.config/img/1975.jpg
 exec_always --no-startup-id picom -b
 
 # dock
-# exec_always --no-startup-id sh /home/hummusbird/.screenlayout/docked.sh
+# exec_always --no-startup-id sh ~/.screenlayout/docked.sh
 
 # streamdeck
 exec --no-startup-id streamdeck -n
 
 # screenshot
-bindsym Print exec gscreenshot -s -f /dev/stdout | .config/scripts/upload.sh | xclip -selection clipboard
+bindsym Print exec gscreenshot -s -f /dev/stdout | ~/.config/scripts/upload.sh | xclip -selection clipboard
 
 # display binds (f16 & f15)
-bindsym XF86Launch7 exec --no-startup-id /home/hummusbird/.screenlayout/closed_docked.sh
-bindsym XF86Launch6 exec --no-startup-id /home/hummusbird/.screenlayout/single.sh
+bindsym XF86Launch7 exec --no-startup-id ~/.screenlayout/closed_docked.sh
+bindsym XF86Launch6 exec --no-startup-id ~/.screenlayout/single.sh
 
 set $mod Mod4
 
