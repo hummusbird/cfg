@@ -1,0 +1,11 @@
+[Added Associations]
+application/zip=io.elementary.files.desktop;
+text/plain=microsoft-edge.desktop;
+text/html=microsoft-edge.desktop;
+application/pdf=microsoft-edge.desktop;
+
+[Default Applications]
+application/zip=io.elementary.files.desktop
+text/plain=microsoft-edge.desktop
+text/html=microsoft-edge.desktop
+application/pdf=microsoft-edge.desktop

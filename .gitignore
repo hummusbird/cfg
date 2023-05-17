@@ -1,6 +1,10 @@
 /discord
 /pavucontrol
 /Code - OSS
+/Code
+/cura
+/Element
+/nordvpn
 /microsoft-edge
 /cef_user_data
 pavucontrol.ini
@@ -27,4 +31,3 @@ discord-stable.desktop
 key.txt
 QtProject.conf
 cv_debug.log
-mimeapps.list
