@@ -28,6 +28,10 @@ discord-stable.desktop
 /teams
 /teamviewer
 /copyq
+/obs-studio
+/Kitware
+/imhex
+/audacity
 key.txt
 QtProject.conf
 cv_debug.log
