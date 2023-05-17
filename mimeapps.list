@@ -1,11 +1,13 @@
 [Added Associations]
 application/zip=io.elementary.files.desktop;
-text/plain=microsoft-edge.desktop;
+text/plain=code.desktop;
 text/html=microsoft-edge.desktop;
 application/pdf=microsoft-edge.desktop;
+image/png=gimp.desktop;
 
 [Default Applications]
 application/zip=io.elementary.files.desktop
-text/plain=microsoft-edge.desktop
+text/plain=code.desktop
 text/html=microsoft-edge.desktop
 application/pdf=microsoft-edge.desktop
+image/png=gimp.desktop
