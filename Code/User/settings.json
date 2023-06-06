@@ -5,5 +5,7 @@
     "editor.formatOnType": true,
     "editor.formatOnSave": true,
     "editor.codeLens": false,
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "workbench.colorTheme": "Default Dark Modern",
+    "git.autofetch": true
 }
