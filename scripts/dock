@@ -3,7 +3,7 @@
 # toggles displays on i3 config reload
 
 if (xrandr | grep "DP-2-1 disconnected"); then
-   	xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+   	xrandr --output eDP-1 --primary --mode 1920x1200 --pos 0x0 --rotate normal
 	xrandr --output HDMI-1 --off
 	xrandr  --output DP-1 --off
 	xrandr  --output DP-2 --off
@@ -11,9 +11,9 @@ if (xrandr | grep "DP-2-1 disconnected"); then
 	xrandr  --output DP-2-2 --off
 	xrandr --output DP-2-3 --off
 	feh --bg-fill ~/.config/img/1975.jpg	
-	xrandr --output eDP-1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
+	xrandr --output eDP-1 --primary --mode 1920x1200 --pos 0x0 --rotate normal
 else
-	xrandr --output eDP-1 --mode 1920x1080 --pos 1920x1208 --rotate normal
+	xrandr --output eDP-1 --mode 1920x1200 --pos 1920x1208 --rotate normal
 	xrandr --output HDMI-1 --off
 	xrandr --output DP-1 --off
 	xrandr --output DP-2 --off
