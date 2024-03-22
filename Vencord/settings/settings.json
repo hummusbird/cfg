@@ -87,7 +87,8 @@
             "enabled": true
         },
         "BlurNSFW": {
-            "enabled": false
+            "enabled": true,
+            "blurAmount": 10
         },
         "CallTimer": {
             "enabled": true,
@@ -121,9 +122,6 @@
         "Decor": {
             "enabled": false
         },
-        "DisableDMCallIdle": {
-            "enabled": false
-        },
         "EmoteCloner": {
             "enabled": true
         },
@@ -143,7 +141,9 @@
             "transformEmojis": true,
             "transformCompoundSentence": false,
             "emojiSize": 48,
-            "stickerSize": 160
+            "stickerSize": 160,
+            "hyperLinkText": "{{NAME}}",
+            "useHyperLinks": true
         },
         "FakeProfileThemes": {
             "enabled": false
@@ -187,9 +187,9 @@
             "invertScroll": true,
             "nearestNeighbour": false,
             "square": false,
-            "zoom": 2.058071874999997,
+            "zoom": 2.8341806359374964,
             "size": 512.3330859375001,
-            "zoomSpeed": 0.5
+            "zoomSpeed": 0.759865390625
         },
         "InvisibleChat": {
             "enabled": false
@@ -207,7 +207,10 @@
             "enabled": false
         },
         "MessageClickActions": {
-            "enabled": true
+            "enabled": true,
+            "requireModifier": false,
+            "enableDoubleClickToReply": true,
+            "enableDoubleClickToEdit": true
         },
         "MessageLinkEmbeds": {
             "enabled": false
@@ -234,9 +237,6 @@
             "enabled": false
         },
         "Moyai": {
-            "enabled": false
-        },
-        "MuteNewGuild": {
             "enabled": false
         },
         "MutualGroupDMs": {
@@ -330,7 +330,7 @@
             "colorMobileIndicator": true,
             "list": true,
             "badges": true,
-            "messages": true
+            "messages": false
         },
         "PreviewMessage": {
             "enabled": false
@@ -466,7 +466,7 @@
             "enabled": true
         },
         "VoiceChatDoubleClick": {
-            "enabled": true
+            "enabled": false
         },
         "VcNarrator": {
             "enabled": false
@@ -504,9 +504,32 @@
             "enabled": false
         },
         "ReviewDB": {
-            "enabled": false
+            "enabled": true,
+            "notifyReviews": true,
+            "reviewsDropdownState": true,
+            "showWarning": true,
+            "hideBlockedUsers": true,
+            "hideTimestamps": false
         },
         "FixYoutubeEmbeds": {
+            "enabled": false
+        },
+        "DisableCallIdle": {
+            "enabled": false
+        },
+        "ChatInputButtonAPI": {
+            "enabled": true
+        },
+        "NewGuildSettings": {
+            "enabled": false
+        },
+        "BetterRoleContext": {
+            "enabled": false
+        },
+        "FriendsSince": {
+            "enabled": false
+        },
+        "ResurrectHome": {
             "enabled": false
         }
     },
@@ -520,6 +543,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1706901177024
+        "settingsSyncVersion": 1710768365818
     }
 }
