@@ -7,5 +7,7 @@
     "editor.codeLens": false,
     "editor.fontLigatures": true,
     "workbench.colorTheme": "Default Dark Modern",
-    "git.autofetch": true
+    "git.autofetch": true,
+    "window.zoomLevel": 1,
+    "html.format.wrapLineLength": 0
 }
