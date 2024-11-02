@@ -1,0 +1,6 @@
+[org/gnome/desktop/wm/preferences/]
+action-middle-click-titlebar='none'
+auto-raise=false
+button-layout='appmenu:close'
+focus-mode='sloppy'
+num-workspaces=1
